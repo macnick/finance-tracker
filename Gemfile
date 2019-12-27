@@ -6,6 +6,7 @@ ruby '2.6.4'
 gem 'coffee-rails', '~> 4.2'
 gem 'rails', '~> 5.2.4'
 # Use Puma as the app server
+gem 'pg'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
