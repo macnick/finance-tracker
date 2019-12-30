@@ -1680,3 +1680,365 @@ Processing by StocksController#search as HTML
 Completed 200 OK in 1061ms (Views: 74.7ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=less&button=" for ::1 at 2019-12-30 16:03:35 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"less", "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/my_portfolio
+Completed 302 Found in 3007ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 16:03:38 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 326ms (Views: 310.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=tsla&button=" for ::1 at 2019-12-30 16:03:44 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"tsla", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 5879ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=ibm&button=" for ::1 at 2019-12-30 16:14:53 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"ibm", "button"=>""}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1139ms (Views: 111.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=aapl&button=" for ::1 at 2019-12-30 16:15:12 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"aapl", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 886ms (Views: 43.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=aapl&button=" for ::1 at 2019-12-30 16:15:18 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"aapl", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1418ms (Views: 43.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=aapl&button=" for ::1 at 2019-12-30 16:15:23 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"aapl", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 867ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=ibm&button=" for ::1 at 2019-12-30 16:15:26 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"ibm", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1251ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=ibm&button=" for ::1 at 2019-12-30 16:16:01 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"ibm", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 816ms (Views: 47.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=ibm&button=" for ::1 at 2019-12-30 17:17:16 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"ibm", "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 1205ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::MissingTemplate (Missing template users/result with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nickhar/Projects/finance-tracker/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-bootstrap-views-1.1.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views"
+):
+  
+app/controllers/stocks_controller.rb:6:in `search'
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:17:22 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.6ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 477ms (Views: 474.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=APPL&button=" for ::1 at 2019-12-30 17:17:30 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"APPL", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/my_portfolio
+Completed 302 Found in 785ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:17:31 +0200
+Processing by UsersController#my_portfolio as JS
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.3ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 57ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=APPL&button=" for ::1 at 2019-12-30 17:17:33 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"APPL", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/my_portfolio
+Completed 302 Found in 715ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:17:34 +0200
+Processing by UsersController#my_portfolio as JS
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.3ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 77ms (Views: 71.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 17:17:45 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 1118ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::MissingTemplate (Missing template users/result with {:locale=>[:en], :formats=>[:js, :html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nickhar/Projects/finance-tracker/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-bootstrap-views-1.1.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views"
+):
+  
+app/controllers/stocks_controller.rb:6:in `search'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 17:17:46 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 1122ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::MissingTemplate (Missing template users/result with {:locale=>[:en], :formats=>[:js, :html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nickhar/Projects/finance-tracker/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-bootstrap-views-1.1.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views"
+):
+  
+app/controllers/stocks_controller.rb:6:in `search'
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:18:54 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.8ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 78ms (Views: 60.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 17:18:59 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.5ms)
+Completed 200 OK in 832ms (Views: 5.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 17:20:27 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.5ms)
+Completed 200 OK in 1238ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 17:22:00 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.5ms)
+Completed 200 OK in 932ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=aapl&button=" for ::1 at 2019-12-30 17:22:10 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"aapl", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.5ms)
+Completed 200 OK in 754ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=aapl&button=" for ::1 at 2019-12-30 17:31:10 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"aapl", "button"=>""}
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.6ms)
+Completed 200 OK in 959ms (Views: 17.9ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=aapl&button=" for ::1 at 2019-12-30 17:32:16 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"aapl", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.6ms)
+Completed 200 OK in 744ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:32:18 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.5ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 255ms (Views: 252.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 17:32:22 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.6ms)
+Completed 200 OK in 831ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 17:35:43 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.6ms)
+Completed 200 OK in 1285ms (Views: 57.3ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:35:45 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.5ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 175ms (Views: 163.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 17:35:49 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.5ms)
+Completed 200 OK in 762ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:39:38 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.5ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 332ms (Views: 313.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 17:39:44 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.7ms)
+  Rendered users/_result.js.erb (22.2ms)
+Completed 200 OK in 3524ms (Views: 70.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:40:07 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.8ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 625ms (Views: 596.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=AaPL&button=" for ::1 at 2019-12-30 17:40:19 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"AaPL", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.5ms)
+  Rendered users/_result.js.erb (1.9ms)
+Completed 200 OK in 1145ms (Views: 17.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 17:40:51 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.4ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 161ms (Views: 157.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 17:40:54 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 406 Not Acceptable in 869ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/stocks_controller.rb:6:in `search'
