@@ -897,3 +897,485 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 273ms (Views: 269.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/my_portfolio?utf8=%E2%9C%93&stock=APPL&button=" for ::1 at 2019-12-30 11:43:08 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#my_portfolio as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"APPL", "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 630ms (Views: 600.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 11:43:16 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 406 Not Acceptable in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UnknownFormat (StocksController#search is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 11:56:46 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 406 Not Acceptable in 140ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::UnknownFormat (StocksController#search is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.4.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 11:57:21 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::MissingTemplate (Missing template stocks/search, application/search with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nickhar/Projects/finance-tracker/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-bootstrap-views-1.1.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views"
+):
+  
+app/controllers/stocks_controller.rb:4:in `search'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=MIND&button=" for ::1 at 2019-12-30 11:57:38 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"MIND", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=APPL&button=" for ::1 at 2019-12-30 11:57:47 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"APPL", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=APLL&button=" for ::1 at 2019-12-30 11:57:54 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"APLL", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 11:57:59 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 11:58:30 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:02:25 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:02:28 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_portfolio?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:05:16 +0200
+Processing by UsersController#my_portfolio as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 210ms (Views: 189.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:06:00 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    14:       </div>
+    15:     </div>
+    16:   <% end %>
+    17:   <%= render @stock %>
+    18: </div>
+  
+app/views/users/my_portfolio.html.erb:17:in `_app_views_users_my_portfolio_html_erb__3747376038740660065_70138618909360'
+app/controllers/stocks_controller.rb:4:in `search'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:08:48 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `ticker' for nil:NilClass):
+    16:   <% end %>
+    17: </div>
+    18: </div class="well results-block">
+    19:   <%= @stock.ticker %>
+    20: </div>
+  
+app/views/users/my_portfolio.html.erb:19:in `_app_views_users_my_portfolio_html_erb__3747376038740660065_70138659854980'
+app/controllers/stocks_controller.rb:4:in `search'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:38:59 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 6.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `ticker' for nil:NilClass):
+    16:   <% end %>
+    17: </div>
+    18: </div class="well results-block">
+    19:   <%= @stock.ticker %>
+    20: </div>
+  
+app/views/users/my_portfolio.html.erb:19:in `_app_views_users_my_portfolio_html_erb__3747376038740660065_70138648710660'
+app/controllers/stocks_controller.rb:4:in `search'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:45:05 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `ticker' for nil:NilClass):
+    16:   <% end %>
+    17: </div>
+    18: <div class="well results-block">
+    19:   <strong>Symbol: </strong> <%= @stock.ticker %>
+    20:   <strong>Name: </strong> <%= @stock.name %>
+    21:   <strong>Price: </strong> <%= @stock.last_price %>
+    22: </div>
+  
+app/views/users/my_portfolio.html.erb:19:in `_app_views_users_my_portfolio_html_erb__3747376038740660065_70138631797280'
+app/controllers/stocks_controller.rb:4:in `search'
+Started GET "/" for ::1 at 2019-12-30 12:45:38 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 745ms (Views: 676.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2019-12-30 12:45:52 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `ticker' for nil:NilClass):
+    16:   <% end %>
+    17: </div>
+    18: <div class="well results-block">
+    19:   <strong>Symbol: </strong> <%= @stock.ticker %>
+    20:   <strong>Name: </strong> <%= @stock.name %>
+    21:   <strong>Price: </strong> <%= @stock.last_price %>
+    22: </div>
+  
+app/views/users/my_portfolio.html.erb:19:in `_app_views_users_my_portfolio_html_erb___188392594216682531_70155420724360'
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:46:06 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `ticker' for nil:NilClass):
+    16:   <% end %>
+    17: </div>
+    18: <div class="well results-block">
+    19:   <strong>Symbol: </strong> <%= @stock.ticker %>
+    20:   <strong>Name: </strong> <%= @stock.name %>
+    21:   <strong>Price: </strong> <%= @stock.last_price %>
+    22: </div>
+  
+app/views/users/my_portfolio.html.erb:19:in `_app_views_users_my_portfolio_html_erb___188392594216682531_70155399075020'
+app/controllers/stocks_controller.rb:4:in `search'
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2019-12-30 12:48:35 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 521ms (Views: 497.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=GOOG&button=" for ::1 at 2019-12-30 12:48:44 +0200
+Processing by StocksController#search as HTML
+  Parameters: {"utf8"=>"✓", "stock"=>"GOOG", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/my_portfolio.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `ticker' for nil:NilClass):
+    16:   <% end %>
+    17: </div>
+    18: <div class="well results-block">
+    19:   <strong>Symbol: </strong> <%= @stock.ticker %>
+    20:   <strong>Name: </strong> <%= @stock.name %>
+    21:   <strong>Price: </strong> <%= @stock.last_price %>
+    22: </div>
+  
+app/views/users/my_portfolio.html.erb:19:in `_app_views_users_my_portfolio_html_erb___3080580108267369267_70281962735200'
+app/controllers/stocks_controller.rb:4:in `search'
+Started GET "/" for ::1 at 2019-12-30 12:55:04 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'devise_bootstrap_views' with type 'text/css'
+Checked in these paths: 
+  /Users/nickhar/Projects/finance-tracker/app/assets/config
+  /Users/nickhar/Projects/finance-tracker/app/assets/images
+  /Users/nickhar/Projects/finance-tracker/app/assets/javascripts
+  /Users/nickhar/Projects/finance-tracker/app/assets/stylesheets
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/fonts
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/javascripts
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/assets/stylesheets
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/vendor/assets/stylesheets
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/jquery-rails-4.3.5/vendor/assets/javascripts
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/actioncable-5.2.4.1/lib/assets/compiled
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activestorage-5.2.4.1/app/assets/javascripts
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/actionview-5.2.4.1/lib/assets/compiled
+  /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/nickhar/Projects/finance-tracker/node_modules):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "FinanceTracker" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <%= javascript_include_tag "application" %>
+    13: 
+  
+app/assets/stylesheets/application.css:13
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1827149022719845449_70281961585260'
+Started GET "/" for ::1 at 2019-12-30 12:56:14 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 246ms (Views: 229.2ms | ActiveRecord: 1.0ms)
+
+
