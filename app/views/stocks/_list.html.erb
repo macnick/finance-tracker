@@ -14,8 +14,8 @@
     <% @user_stocks.each do |stock| %>
       <tr>
         <td><%= stock.name %></td>
-        <td class="horizontal-align-right"><%= stock.ticker %></td>
-        <td><%= stock.last_price %></td>
+        <td><%= stock.ticker %></td>
+        <td  class="text-center"><%= stock.last_price %></td>
         <% if @user.id == current_user.id %>
           <td><%= link_to "Delete this stock",  user_stock_path(stock), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-xs btn-danger" %></td>
         <% end %>
