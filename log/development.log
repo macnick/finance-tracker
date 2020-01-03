@@ -8169,3 +8169,204 @@ Processing by UsersController#my_friends as HTML
 Completed 200 OK in 83ms (Views: 62.4ms | ActiveRecord: 17.9ms)
 
 
+Started GET "/my_friends" for ::1 at 2020-01-03 13:50:41 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered users/my_friends.html.erb within layouts/application (52.8ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 6.8ms)
+
+
+  
+ActionView::Template::Error (Missing partial friends/_lookup with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/nickhar/Projects/finance-tracker/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/twitter-bootstrap-rails-4.0.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-bootstrap-views-1.1.0/app/views"
+  * "/Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/devise-4.7.1/app/views"
+):
+    1: <%= render 'friends/lookup' %>
+    2: <% if @friendships.size > 0 %>
+    3:   <table class="table table-striped table-dark">
+    4:     <thead>
+  
+app/views/users/my_friends.html.erb:1:in `_app_views_users_my_friends_html_erb__890983883648413260_70128616796060'
+Started GET "/my_friends" for ::1 at 2020-01-03 13:53:44 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered friends/_lookup.html.erb (0.7ms)
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/my_friends.html.erb:2
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/my_friends.html.erb:17
+  Rendered users/my_friends.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 355ms (Views: 331.8ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/my_friends" for ::1 at 2020-01-03 13:53:55 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered friends/_lookup.html.erb (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/my_friends.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/my_friends.html.erb:17
+  Rendered users/my_friends.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/my_friends" for ::1 at 2020-01-03 13:56:31 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/views/users/my_friends.html.erb:1
+  Rendered friends/_lookup.html.erb (480.3ms)
+  Rendered users/my_friends.html.erb within layouts/application (481.9ms)
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_friends_path' for #<#<Class:0x00007f9028cd7368>:0x00007f902e8ee070>
+Did you mean?  search_field_tag):
+    1: <h3>Search for Friends</h3>
+    2: <div id="friend-lookup">
+    3:   <%= form_tag search_friends_path, remote: true, method: :get, id: "friend-lookup-form" do %>
+    4:     <div class="form-group row no-padding text-center col-md-12">
+    5:       <div class="col-md-10">
+    6:         <%= text_field_tag :search_param, params[:search_param], placeholder: "Enter name or email", autofocus: true, class: "form-control search-box input-lg" %>
+  
+app/views/friends/_lookup.html.erb:3:in `_app_views_friends__lookup_html_erb___3060638434825003966_70128602160820'
+app/views/users/my_friends.html.erb:1:in `_app_views_users_my_friends_html_erb__890983883648413260_70128616567960'
+Started GET "/my_friends" for ::1 at 2020-01-03 14:01:08 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered friends/_lookup.html.erb (1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/my_friends.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/my_friends.html.erb:17
+  Rendered users/my_friends.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 139ms (Views: 83.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-01-03 14:01:18 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KLf7rwEjetH7IW+FhDL1pY2rwILohOuBf4A9F4k6am6SXq9pJHAQm1xw0uPLFH4KML38MkuKhDokc2R95ao5ug=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 14:01:18 +0200
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-01-03 14:01:18 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-01-03 14:01:20 +0200
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 122ms (Views: 120.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-01-03 14:01:36 +0200
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u2B0pU+9RHSIM6TOyXeCY2hsOKIrdem1dgFBGQw0hZiJKg/xGDqgLZXDpQmpsY6X3DtsJ7ojQnNEqbPUAgA4LQ==", "user"=>{"email"=>"j.c@gmail.com", "first_name"=>"John", "last_name"=>"Carpenter", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (10.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j.c@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (7.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "j.c@gmail.com"], ["encrypted_password", "$2a$11$Hx8.9yR4WikhqA3GTW/QY.K28f44wCVscqd./DTCvNKDXyeB7AwOy"], ["created_at", "2020-01-03 12:01:36.696358"], ["updated_at", "2020-01-03 12:01:36.696358"], ["first_name", "John"], ["last_name", "Carpenter"]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 202ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/" for ::1 at 2020-01-03 14:01:36 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 71ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_friends" for ::1 at 2020-01-03 14:01:39 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered friends/_lookup.html.erb (1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/my_friends.html.erb:2
+  Rendered users/my_friends.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 92ms (Views: 87.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/my_friends" for ::1 at 2020-01-03 14:03:08 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered friends/_lookup.html.erb (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/my_friends.html.erb:2
+  Rendered users/my_friends.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 100ms (Views: 77.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/search_friends?utf8=%E2%9C%93&search_param=%40&button=" for ::1 at 2020-01-03 14:04:28 +0200
+Processing by UsersController#search as JS
+  Parameters: {"utf8"=>"✓", "search_param"=>"@", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+No template found for UsersController#search, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 0.2ms)
+
+
