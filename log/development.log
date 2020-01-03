@@ -8370,3 +8370,38 @@ No template found for UsersController#search, rendering head :no_content
 Completed 204 No Content in 54ms (ActiveRecord: 0.2ms)
 
 
+Started GET "/my_friends" for ::1 at 2020-01-03 17:15:00 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered friends/_lookup.html.erb (1.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/my_friends.html.erb:2
+  Rendered users/my_friends.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 564ms (Views: 549.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search_friends?utf8=%E2%9C%93&search_param=%40&button=" for ::1 at 2020-01-03 17:15:08 +0200
+Processing by UsersController#search as JS
+  Parameters: {"utf8"=>"✓", "search_param"=>"@", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+No template found for UsersController#search, rendering head :no_content
+Completed 204 No Content in 127ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/my_friends" for ::1 at 2020-01-03 18:12:25 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered friends/_lookup.html.erb (1.3ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/my_friends.html.erb:2
+  Rendered users/my_friends.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 326ms (Views: 248.6ms | ActiveRecord: 2.2ms)
+
+

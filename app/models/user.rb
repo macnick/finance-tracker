@@ -24,4 +24,13 @@ class User < ApplicationRecord
   def can_add_stock?(ticker_symbol)
     under_stock_limit? && !stock_already_added?(ticker_symbol)
   end
+
+  def self.search(param, ignore_user)
+    param.strip!
+    param.downcase!
+    User.where('first_name LIKE ?', "%#{param}%")
+        .or(User.where('last_name LIKE ?', "%#{param}%"))
+        .or(User.where('email LIKE ?', "%#{param}%"))
+        .where.not(id: ignore_user.id)
+  end
 end
