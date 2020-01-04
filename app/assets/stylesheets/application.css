@@ -13,6 +13,7 @@
  
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 .results-block {
@@ -21,4 +22,10 @@
 
 .no-padding {
   padding: 0 !important;
+}
+.left-padding {
+  padding-left: 10px !important;
+}
+.right-padding {
+  padding-right: 10px !important;
 }

@@ -7,6 +7,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem "font-awesome-rails"
 gem 'hirb'
 gem 'iex-ruby-client', '~> 1.0'
 gem 'jbuilder', '~> 2.5'
