@@ -1,6 +1,6 @@
 # Stock tracker with friends
 
-This is the finance tracker app from the Complete Ruby on Rails Developer course. It uses devise gem to implement sign up and log in user functionality. After logging in the user goes to his page. There is the possibility to search for stocks and add them to the list of tracked stocks.
+This is the finance tracker app from the Complete Ruby on Rails Developer course. It uses devise gem to implement sign-up and log-in user functionality. After logging in the user goes to his page. There is the possibility to search for stocks and add them to the list of tracked stocks.
 
 ### Screenshot
 
