@@ -4,7 +4,8 @@
     <tr>
       <th>Name</th>
       <th>Symbol</th>
-      <th>Current Price</th>
+      <th>Price</th>
+      <th>Price Date</th>
       <% if @user.id == current_user.id %>
         <th>Actions</th>
       <% end %>
@@ -16,6 +17,7 @@
         <td><%= stock.name %></td>
         <td><%= stock.ticker %></td>
         <td  class="text-center"><%= stock.last_price %></td>
+        <td  class="text-center"><%= stock.price_date %></td>
         <% if @user.id == current_user.id %>
           <td><%= link_to "Delete this stock",  user_stock_path(stock), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-xs btn-danger" %></td>
         <% end %>

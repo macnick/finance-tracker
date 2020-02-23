@@ -16891,3 +16891,417 @@ Processing by StocksController#search as JS
 Completed 200 OK in 845ms (Views: 15.0ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:08:27 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.7ms)
+  [1m[36mStock Load (1.0ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:14
+  Rendered stocks/_list.html.erb (44.7ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (51.3ms)
+  Rendered layouts/_navigation.html.erb (15.7ms)
+Completed 200 OK in 1862ms (Views: 1680.3ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/my_friends" for ::1 at 2020-02-23 14:11:37 +0200
+Processing by UsersController#my_friends as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_friends.html.erb within layouts/application
+  Rendered users/_result.html.erb (1.2ms)
+  Rendered friends/_lookup.html.erb (8.8ms)
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/my_friends.html.erb:3
+  Rendered users/my_friends.html.erb within layouts/application (64.8ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 236ms (Views: 176.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2020-02-23 14:11:41 +0200
+Processing by User::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (47.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 185ms (Views: 175.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:11:43 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (6.9ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:14
+  Rendered stocks/_list.html.erb (3.2ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 225ms (Views: 219.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-23 14:11:44 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+Completed 200 OK in 148ms (Views: 144.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-02-23 14:11:49 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"llL37i94J2JHn7BfTZqiQQ7Abc6RfDCg2ZX8HwrnOByOEoGyL+f3D6unbiczj4lOoS6rUuvK8B6PKATuW7g3Tw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-23 14:11:49 +0200
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-02-23 14:11:49 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 198ms (Views: 194.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-02-23 14:11:55 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KzUt6ULrkOdxkWTibG8G8FDQjyNuk8Jpsl85FYL54cHrRQAcENkoFMSn0SyibsCA3zzwWcs9n1X/R1dIijiLFA==", "user"=>{"email"=>"daniel@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "daniel@test.com"], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 35ms (ActiveRecord: 11.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KzUt6ULrkOdxkWTibG8G8FDQjyNuk8Jpsl85FYL54cHrRQAcENkoFMSn0SyibsCA3zzwWcs9n1X/R1dIijiLFA==", "user"=>{"email"=>"daniel@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+Completed 200 OK in 328ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-02-23 14:12:03 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aP2+DseXepJd+tqhf8Yvr+V6uRcU2+yH7HVZK5JrXv+ojZP7laXCYejMb2+xx+nfapbGbbF1sbuhbTd2mqo0Kg==", "user"=>{"email"=>"nick@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nick@test.com"], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 243ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-23 14:12:04 +0200
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 154ms (Views: 150.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:12:06 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.9ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:14
+  Rendered stocks/_list.html.erb (2.8ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 133ms (Views: 129.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=TSLA&button=" for ::1 at 2020-02-23 14:12:12 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"TSLA", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stocks" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:21
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "TSLA"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[36mUserStock Exists (10.8ms)[0m  [1m[34mSELECT  1 AS one FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? LIMIT ?[0m  [["user_id", 1], ["stock_id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stocks" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:21
+  [1m[36mCACHE Stock Load (0.0ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "TSLA"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[36mCACHE UserStock Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? LIMIT ?[0m  [["user_id", 1], ["stock_id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendered users/_result.html.erb (17.7ms)
+  Rendered users/_result.js.erb (26.3ms)
+Completed 200 OK in 3639ms (Views: 38.0ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=TSLA&button=" for ::1 at 2020-02-23 14:12:15 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"TSLA", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stocks" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:21
+  [1m[36mStock Load (0.1ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "TSLA"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[36mUserStock Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? LIMIT ?[0m  [["user_id", 1], ["stock_id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stocks" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:21
+  [1m[36mCACHE Stock Load (0.0ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "TSLA"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[36mCACHE UserStock Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? LIMIT ?[0m  [["user_id", 1], ["stock_id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendered users/_result.html.erb (6.2ms)
+  Rendered users/_result.js.erb (12.1ms)
+Completed 200 OK in 1093ms (Views: 16.9ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDateToStocks (20200223121751)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (258.7ms)[0m  [1m[35mALTER TABLE "stocks" ADD "price_date" datetime[0m
+  ↳ db/migrate/20200223121751_add_date_to_stocks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (8.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200223121751"]]
+  ↳ bin/rails:9
+  [1m[35m (64.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (22.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:19:28 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.9ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:14
+  Rendered stocks/_list.html.erb (14.5ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (34.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 531ms (Views: 452.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:20:38 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (1.1ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:14
+  Rendered stocks/_list.html.erb (2.8ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (23.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 470ms (Views: 442.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for ::1 at 2020-02-23 14:20:43 +0200
+Processing by User::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 84ms (Views: 82.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:20:45 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (2.7ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:14
+  Rendered stocks/_list.html.erb (3.4ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 102ms (Views: 98.7ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks"[0m
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:22:38 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.7ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:14
+  Rendered stocks/_list.html.erb (2.8ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 281ms (Views: 257.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:23:13 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.8ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:15
+  Rendered stocks/_list.html.erb (2.7ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 91ms (Views: 88.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:23:33 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.9ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:15
+  Rendered stocks/_list.html.erb (3.6ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=TSLA&button=" for ::1 at 2020-02-23 14:23:47 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"TSLA", "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stocks" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:21
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "TSLA"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[36mUserStock Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? LIMIT ?[0m  [["user_id", 1], ["stock_id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stocks" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:21
+  [1m[36mCACHE Stock Load (0.0ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "TSLA"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[36mCACHE UserStock Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? LIMIT ?[0m  [["user_id", 1], ["stock_id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendered users/_result.html.erb (6.0ms)
+  Rendered users/_result.js.erb (13.5ms)
+Completed 200 OK in 924ms (Views: 31.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/user_stocks/4" for ::1 at 2020-02-23 14:23:57 +0200
+Processing by UserStocksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gIrtNfMRlEkxCsM8RBJXk1HrtH8QggkRYFSuSI5Alr/NIQpu1xNEaC1PpblLn2yAfI11Wm7vk+rIjhNnVZ5Vkw==", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_stocks_controller.rb:15
+  [1m[36mUserStock Load (0.2ms)[0m  [1m[34mSELECT  "user_stocks".* FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? ORDER BY "user_stocks"."id" ASC LIMIT ?[0m  [["user_id", 1], ["stock_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/user_stocks_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_stocks_controller.rb:17
+  [1m[36mUserStock Destroy (7.7ms)[0m  [1m[31mDELETE FROM "user_stocks" WHERE "user_stocks"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/user_stocks_controller.rb:17
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_stocks_controller.rb:17
+Redirected to http://localhost:3000/my_portfolio
+Completed 302 Found in 20ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:23:57 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.7ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:15
+  Rendered stocks/_list.html.erb (2.9ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=APPL&button=" for ::1 at 2020-02-23 14:24:01 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"APPL", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered users/_result.html.erb (0.8ms)
+  Rendered users/_result.js.erb (6.9ms)
+Completed 200 OK in 810ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search_stocks?utf8=%E2%9C%93&stock=aapl&button=" for ::1 at 2020-02-23 14:24:07 +0200
+Processing by StocksController#search as JS
+  Parameters: {"utf8"=>"✓", "stock"=>"aapl", "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_stocks" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:21
+  [1m[36mStock Load (0.1ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "AAPL"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[36mUserStock Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "user_stocks" WHERE "user_stocks"."user_id" = ? AND "user_stocks"."stock_id" = ? LIMIT ?[0m  [["user_id", 1], ["stock_id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  Rendered users/_result.html.erb (3.7ms)
+  Rendered users/_result.js.erb (8.6ms)
+Completed 200 OK in 1296ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/user_stocks?stock_ticker=AAPL&user=1" for ::1 at 2020-02-23 14:24:37 +0200
+Processing by UserStocksController#create as HTML
+  Parameters: {"authenticity_token"=>"s919SH7+DertxcI4xcw5HV415ZHi5aO7q7nsRyoIa4H+dpoTWvzdy/GApL3KQQIOc1MktJyIOUADY1Fo8daorQ==", "stock_ticker"=>"AAPL", "user"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  "stocks".* FROM "stocks" WHERE "stocks"."ticker" = ? ORDER BY "stocks"."id" ASC LIMIT ?[0m  [["ticker", "AAPL"], ["LIMIT", 1]]
+  ↳ app/models/stock.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/user_stocks_controller.rb:9
+  [1m[36mUserStock Create (0.5ms)[0m  [1m[32mINSERT INTO "user_stocks" ("user_id", "stock_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["stock_id", 4], ["created_at", "2020-02-23 12:24:37.823318"], ["updated_at", "2020-02-23 12:24:37.823318"]]
+  ↳ app/controllers/user_stocks_controller.rb:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/user_stocks_controller.rb:9
+Redirected to http://localhost:3000/my_portfolio
+Completed 302 Found in 39ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/my_portfolio" for ::1 at 2020-02-23 14:24:37 +0200
+Processing by UsersController#my_portfolio as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/nickhar/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering users/my_portfolio.html.erb within layouts/application
+  Rendered users/_result.html.erb (0.6ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT "stocks".* FROM "stocks" INNER JOIN "user_stocks" ON "stocks"."id" = "user_stocks"."stock_id" WHERE "user_stocks"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/stocks/_list.html.erb:15
+  Rendered stocks/_list.html.erb (3.4ms)
+  Rendered users/my_portfolio.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 102ms (Views: 98.6ms | ActiveRecord: 0.4ms)
+
+
