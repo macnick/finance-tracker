@@ -140,6 +140,10 @@ GEM
     msgpack (1.3.3)
     multipart-post (2.1.1)
     nio4r (2.5.2)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 50523149fb85fa796c97670fa6592b4736a8db86
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
@@ -147,6 +151,18 @@ GEM
     public_suffix (4.0.3)
     puma (3.12.4)
     rack (2.2.2)
+<<<<<<< HEAD
+=======
+=======
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
+    pg (1.2.0)
+    public_suffix (4.0.1)
+    puma (3.12.4)
+    rack (2.0.8)
+>>>>>>> b81cc8fa9587fee8ca9310598e6693ada8f768eb
+>>>>>>> 50523149fb85fa796c97670fa6592b4736a8db86
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.2)
